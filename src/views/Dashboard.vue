@@ -56,14 +56,14 @@ export default {
 .dashboard-maingraph {
   width: 66%;
   margin-right: 2%;
-  height: 480px;
+  height: 500px;
   float: left;
   background-color: #fff;
   border-radius: 10px;
 }
 .dashboard-sponsors {
   width: 32%;
-  height: 480px;
+  height: 500px;
   float: left;
   background-color: #fff;
   border-radius: 15px;

@@ -4,10 +4,10 @@ const { reactiveProp } = mixins
 export default {
   extends: Doughnut,
   mixins: [reactiveProp],
-  props: [
-    {cutoutPercentage: '50'}
-  ],
+  props: ['options'],
   mounted () {
+    console.log(this.chartData)
+    console.log(this.options)
     this.renderChart(this.chartData, this.options)
   }
 }
