@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="content-container">
+    <p>This is the management tool to create, modify or remove portal applications, promotions or giveaways.</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { mapGetters, mapActions } from 'vuex';
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  mounted () {
+    if (this.$route.name !== this.navCurrent){
+      this.setCurrentNav(this.$route.name)
+    }
+  },
+  methods: {
+    ...mapActions([
+      'setCurrentNav'
+    ])
+  },
+  computed: {
+    ...mapGetters([
+      'navCurrent',
+      'user'
+    ])
   }
 }
 </script>
