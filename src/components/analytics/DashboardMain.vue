@@ -11,24 +11,29 @@ export default {
   data () {
     return {
       chartData: {
+        labels: ['Draft Kings', 'State Farm', 'GameStop', 'Bacardi', 'Nissan'],
         datasets: [{
-          data: ['10', '20', '30','50','15']
-        }],
-        labels: [
-          'Draft Kings',
-          'Nissan',
-          'State Farm',
-          'Bacardi',
-          'Gamestop'
-        ],
-        backgroundColors: [
-          '#0074D9', 
-          '#FF4136', 
-          '#2ECC40', 
-          '#FF851B', 
-          '#7FDBFF'
-        ]
-      },
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)'
+            ],
+            hoverBackgroundColor: [
+              'rgba(255, 99, 132, 0.8)',
+              'rgba(54, 162, 235, 0.8)',
+              'rgba(255, 206, 86, 0.8)',
+              'rgba(75, 192, 192, 0.8)',
+              'rgba(153, 102, 255, 0.8)'
+            ],
+            borderColor: [
+            ],
+            borderWidth: 1
+        }]
+    },
       options: {cutoutPercentage: 20}
     }
   },
