@@ -11,8 +11,8 @@
         <dashboard-main />
       </div>
       <div class="dashboard-sponsors">
-        <div class="brand-item" v-for="item in sponsors" v-bind:key="item._id" :style="getColor(item.color)">
-          <img :src="item.img" style="height:100px;"/>
+        <div class="brand-item" v-for="item in sponsors" v-bind:key="item._id" :style="getColor(item.color)" @click="analyze(item.name)">
+          <img :src="item.img" style="height:94px; padding:3px;"/>
         </div>
       </div>
     </div>
@@ -52,8 +52,11 @@ export default {
   },
   methods: {
     getColor (name) {
-      console.log(name)
       return name
+    },
+    analyze (name) {
+      let lname = name.toLowerCase()
+      this.$router.push(`/analytics/${lname}`)
     }
   }
 }
