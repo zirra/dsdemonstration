@@ -112,7 +112,7 @@ select {
 input:focus { 
   border: 0px;
   outline: none;
-  background-color: #efefef;
+  background-color: #f5cc5d;
   border-bottom: solid 1px #999;
 }
 

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Dashboard from '@/views/Dashboard'
 import Controller from '@/views/Controller'
+import Analytics from '@/views/Analytics'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/controller',
       name: 'controller',
       component: Controller
+    },
+    {
+      path: '/analytics',
+      name: 'analytics',
+      component: Analytics
     }
   ]
 })

@@ -17,6 +17,7 @@ const state = {
   navCurrent : null,
   navItems : [
     { name : 'dashboard', label : 'DASH' },
+    { name : 'analytics', label : 'ANALYTICS'},
     { name : 'controller', label : 'CONTROLLER'},
     { name : 'logout', label: 'LOGOUT'}
   ]
