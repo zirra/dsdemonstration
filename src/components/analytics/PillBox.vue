@@ -26,7 +26,7 @@ export default {
 }
 .content-pillbox-container {
   font-size: 1.2em;
-  text-align: left;
+  text-align: center;
   padding: 0px 25px;
   color: #404040;
 }

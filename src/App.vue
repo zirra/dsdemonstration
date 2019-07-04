@@ -81,7 +81,7 @@ h1, h2, h3, h4 {
   margin-top: 24px
 }
 .content-container {
-  width: 85%;
+  width: 1120px;
   text-align: left;
   margin: 0px auto;
 }

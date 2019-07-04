@@ -1,7 +1,11 @@
 <template>
-  <div class="content-container">
+  <div style="text-align:center;">
     <h3>Advertiser Engagement</h3>
-    <dough-nut :chart-data="chartData" :options="options"/>
+    <div style="text-align:center; margin:0px auto;">
+      <div style="max-width:425px; margin:0px auto;">
+        <dough-nut :chart-data="chartData" :options="options"/>
+      </div>
+    </div>
   </div>
 </template>
 

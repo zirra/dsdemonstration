@@ -32,7 +32,7 @@ export default {
         title: 'Total Scans'
       },
       item_2: {
-        title: 'Top Scans'
+        title: 'Scans by Brand'
       },
       item_3: {
         title: 'Redeemed Offers'
@@ -58,13 +58,13 @@ export default {
   width: 66%;
   margin-right: 2%;
   float: left;
-  height: 560px;
+  height: 500px;
   background-color: #fff;
   border-radius: 10px;
 }
 .dashboard-sponsors {
   width: 32%;
-  height: 560px;
+  height: 500px;
   float: left;
   background-color: #fff;
   border-radius: 15px;
