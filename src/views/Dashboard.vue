@@ -1,9 +1,9 @@
 <template>
   <div class="content-container">  
     <div class="pillbox-container">
-      <pillbox-view style="margin-right:2%;"/>
-      <pillbox-view style="margin-right:2%;" />
-      <pillbox-view/>
+      <pillbox-view style="margin-right:2%;" :item="item_1"/>
+      <pillbox-view style="margin-right:2%;" :item="item_2" />
+      <pillbox-view :item="item_3"/>
     </div>
     <div style="clear:both; float:none; padding:1%;"></div>
     <div class="dashboard-overview">
@@ -21,6 +21,19 @@ export default {
   name: 'dashboard-view',
   components: {
     'pillbox-view': PillBox
+  },
+  data () {
+    return {
+      item_1: {
+        title: 'Total Scans'
+      },
+      item_2: {
+        title: 'Top Scans'
+      },
+      item_3: {
+        title: 'Redeemed Offers'
+      },
+    }
   }
 }
 </script>
@@ -43,7 +56,7 @@ export default {
   height: 480px;
   float: left;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .dashboard-sponsors {
   width: 32%;

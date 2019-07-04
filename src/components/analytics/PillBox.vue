@@ -1,14 +1,17 @@
 <template>
   <div class="content-pillbox">
     <div class="content-pillbox-container">
-      test
+      <h3>{{item.title}}</h3>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'pillbox-view'
+  name: 'pillbox-view',
+  props: [
+    'item'
+  ]
 }
 </script>
 
@@ -17,7 +20,7 @@ export default {
   width: 32%;
   float: left;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   min-height: 200px; /* minimum height */
   position: relative;
 }
