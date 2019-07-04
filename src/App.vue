@@ -46,6 +46,7 @@ export default {
 
 <style>
 html, body { width: 100%; padding: 0px; margin: 0px; background-color: #efefef;}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -8,6 +8,7 @@
     <div style="clear:both; float:none; padding:1%;"></div>
     <div class="dashboard-overview">
       <div class="dashboard-maingraph">
+        <dashboard-main />
       </div>
       <div class="dashboard-sponsors">
       </div>
@@ -17,10 +18,12 @@
 
 <script>
 import PillBox from '@/components/analytics/PillBox'
+import DashboardMain from '@/components/analytics/DashboardMain'
 export default {
   name: 'dashboard-view',
   components: {
-    'pillbox-view': PillBox
+    'pillbox-view': PillBox,
+    'dashboard-main': DashboardMain
   },
   data () {
     return {
