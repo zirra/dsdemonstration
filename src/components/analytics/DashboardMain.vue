@@ -1,7 +1,7 @@
 <template>
   <div class="content-container">
     <h3>Advertiser Engagement</h3>
-    <dough-nut :chart-data="chartData" :options="options" width="400" height="400"/>
+    <dough-nut :chart-data="chartData" :options="options"/>
   </div>
 </template>
 

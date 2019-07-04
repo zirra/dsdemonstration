@@ -3,7 +3,7 @@
     <navigation-view/>
     <div id="main" v-if="isLoggedIn">
       <div class="content-container">
-        <h2 class="cherry">{{navCurrent}}</h2>
+        <h2 class="cherry">{{navCurrent}}: Kansas City Chiefs</h2>
       </div>
       <router-view/>
     </div>

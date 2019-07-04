@@ -1,5 +1,5 @@
 <template>
-  <div class="content-container">  
+  <div class="content-container">
     <div class="pillbox-container">
       <pillbox-view style="margin-right:2%;" :item="item_1"/>
       <pillbox-view style="margin-right:2%;" :item="item_2" />
@@ -13,6 +13,7 @@
       <div class="dashboard-sponsors">
       </div>
     </div>
+    <div style="clear:both; float:none; padding-bottom:5%;"></div>
   </div>
 </template>
 
@@ -57,13 +58,13 @@ export default {
   width: 66%;
   margin-right: 2%;
   float: left;
-  height: 540px;
+  height: 560px;
   background-color: #fff;
   border-radius: 10px;
 }
 .dashboard-sponsors {
   width: 32%;
-  height: 540px;
+  height: 560px;
   float: left;
   background-color: #fff;
   border-radius: 15px;
