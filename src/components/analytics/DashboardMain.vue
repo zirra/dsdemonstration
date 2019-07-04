@@ -18,7 +18,7 @@ export default {
       chartData: {
         labels: ['Draft Kings', 'State Farm', 'GameStop', 'Bacardi', 'Nissan'],
         datasets: [{
-            data: [12, 19, 3, 5, 2],
+            data: [26, 44, 32, 52, 32],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',

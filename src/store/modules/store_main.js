@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '@/router'
+
 import { storage } from '../../utils/storage'
 
 Vue.use(Vuex)
@@ -32,6 +34,9 @@ const mutations = {
       storage.clearValue('user')
     }
     state.isLoggedIn = target
+    if (target) {
+      router.push({name: 'home'})
+    }
   }
 }
 const actions = {

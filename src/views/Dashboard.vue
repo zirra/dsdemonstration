@@ -11,6 +11,9 @@
         <dashboard-main />
       </div>
       <div class="dashboard-sponsors">
+        <div class="brand-item" v-for="item in sponsors" v-bind:key="item._id" :style="getColor(item.color)">
+          <img :src="item.img" style="height:100px;"/>
+        </div>
       </div>
     </div>
     <div style="clear:both; float:none; padding-bottom:5%;"></div>
@@ -32,11 +35,25 @@ export default {
         title: 'Total Scans'
       },
       item_2: {
-        title: 'Scans by Brand'
+        title: 'Top Scanned'
       },
       item_3: {
         title: 'Redeemed Offers'
       },
+      sponsors: [
+        {name: 'Bacardi', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/bacardi.png', color: 'background-color: rgba(75, 192, 192, 0.2);'},
+        {name: 'Gamestop', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/gamestop.png', color: 'background-color: rgba(255, 206, 86, 0.2);'},
+        {name: 'State Farm', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/statefarm.png', color: 'background-color: rgba(54, 162, 235, 0.2)'},
+        {name: 'Draftkings', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/draftkingz.png', color: 'background-color: rgba(255, 99, 132, 0.2);'},
+        {name: 'Nissan', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/nissan.png', color: 'background-color: rgba(153, 102, 255, 0.2);'}
+        
+      ]
+    }
+  },
+  methods: {
+    getColor (name) {
+      console.log(name)
+      return name
     }
   }
 }
@@ -63,10 +80,13 @@ export default {
   border-radius: 10px;
 }
 .dashboard-sponsors {
+  text-align: center;
   width: 32%;
   height: 500px;
   float: left;
   background-color: #fff;
-  border-radius: 15px;
+}
+.brand-item {
+  height: 100px;
 }
 </style>
