@@ -16,7 +16,6 @@ export default {
 .content-pillbox {
   width: 32%;
   float: left;
-  height:240px;
   background-color: #fff;
   border-radius: 15px;
   min-height: 200px; /* minimum height */
@@ -24,8 +23,8 @@ export default {
 }
 .content-pillbox-container {
   font-size: 1.2em;
-  text-align: center;
-  padding: 25px 0;
+  text-align: left;
+  padding: 15px 25px;
   color: #404040;
 }
 </style>
