@@ -2,7 +2,7 @@
   <div class="content-container" style="background-color: #fff;">
     <div class="brand-container">
       <div v-for="item in sponsors" v-bind:key="item.id">
-        <div :class="getClass(item.name)">
+        <div :class="getClass(item.name)" @click="setBrand(item.name)">
           <img :src="item.img" style="height:94px; padding:3px;"/>
         </div>
       </div>
@@ -10,8 +10,8 @@
     <div v-if="hasBrand">
       I haz a brand to display {{currentBrand}}
     </div>
-    <div v-else>
-      I haz no brandz
+    <div v-else style="width:98%; background-color:#fff; padding:1%;">
+      <h3 class="med-blue">Select a brand to view data</h3>
     </div>
   </div>
 </template>
@@ -38,12 +38,15 @@ export default {
   methods: {
     getClass (name) {
       let lname = name.toLowerCase()
-      console.log(lname)
       if (lname === this.currentBrand) {
         return 'brand-item-horizontal-selected'
       } else {
         return 'brand-item-horizontal'
       }
+    },
+    setBrand (name) {
+      let lname = name.toLowerCase()
+      this.$router.push(`/analytics/${lname}`)
     },
     ...mapActions([
       'setCurrentNav'
