@@ -12,7 +12,7 @@
       </div>
       <div class="dashboard-sponsors">
         <div class="brand-item" v-for="item in sponsors" v-bind:key="item._id" :style="getColor(item.color)" @click="analyze(item.name)">
-          <img :src="item.img" style="height:94px; padding:3px;"/>
+          <img :src="item.img" style="height:94px;"/>
         </div>
       </div>
     </div>
@@ -36,13 +36,16 @@ export default {
   data () {
     return {
       item_1: {
-        title: 'Total Scans'
+        title: 'Total Scans',
+        value: '45k'
       },
       item_2: {
-        title: 'Top Scanned'
+        title: 'Top Scanned',
+        value: '12.5k'
       },
       item_3: {
-        title: 'Redeemed Offers'
+        title: 'Redeemed Offers',
+        value: '43.2k'
       }
     }
   },
@@ -77,6 +80,9 @@ export default {
   width: 100%;
   clear: both;
   float: none;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 .dashboard-maingraph {
   width: 66%;

@@ -2,6 +2,7 @@
   <div class="content-pillbox">
     <div class="content-pillbox-container">
       <h3>{{item.title}}</h3>
+      <div style="width:100%; margin:0px auto; font-size: 5em; font-weight: 300; line-height: .78em;">{{item.value}}</div>
     </div>
   </div>
 </template>
@@ -21,7 +22,7 @@ export default {
   float: left;
   background-color: #fff;
   border-radius: 10px;
-  min-height: 200px; /* minimum height */
+  min-height: 180px; /* minimum height */
   position: relative;
 }
 .content-pillbox-container {
