@@ -38,6 +38,7 @@ export default new Router({
     },
     {
       path: '/analytics/:id',
+      name: 'analytics',
       component: Analytics
     }
   ]

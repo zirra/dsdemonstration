@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import PillBox from '@/components/analytics/PillBox'
 import DashboardMain from '@/components/analytics/DashboardMain'
 export default {
@@ -43,15 +43,7 @@ export default {
       },
       item_3: {
         title: 'Redeemed Offers'
-      },
-      sponsors: [
-        {name: 'Bacardi', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/bacardi.png', color: 'background-color: rgba(75, 192, 192, 0.2);'},
-        {name: 'Gamestop', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/gamestop.png', color: 'background-color: rgba(255, 206, 86, 0.2);'},
-        {name: 'State Farm', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/statefarm.png', color: 'background-color: rgba(54, 162, 235, 0.2)'},
-        {name: 'Draftkings', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/draftkingz.png', color: 'background-color: rgba(255, 99, 132, 0.2);'},
-        {name: 'Nissan', img: 'https://ds-stadium-bucket.s3.us-east-2.amazonaws.com/stock/icons/nissan.png', color: 'background-color: rgba(153, 102, 255, 0.2);'}
-        
-      ]
+      }
     }
   },
   methods: {
@@ -64,6 +56,11 @@ export default {
     },
     ...mapActions([
       'setCurrentNav'
+    ])
+  },
+  computed: {
+    ...mapGetters([
+      'sponsors'
     ])
   }
 }
