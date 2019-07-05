@@ -18,7 +18,7 @@ export default {
     }
   },
   mounted () {
-    if(Boolean(this.$route.params.id)) {
+    if(this.$route.params.id) {
       this.hasBrand = true
     } else {
       this.hasBrand = false

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import PillBox from '@/components/analytics/PillBox'
 import DashboardMain from '@/components/analytics/DashboardMain'
 export default {
@@ -28,6 +29,9 @@ export default {
   components: {
     'pillbox-view': PillBox,
     'dashboard-main': DashboardMain
+  },
+  mounted () {
+    this.setCurrentNav(this.$route.name) 
   },
   data () {
     return {
@@ -57,7 +61,10 @@ export default {
     analyze (name) {
       let lname = name.toLowerCase()
       this.$router.push(`/analytics/${lname}`)
-    }
+    },
+    ...mapActions([
+      'setCurrentNav'
+    ])
   }
 }
 </script>

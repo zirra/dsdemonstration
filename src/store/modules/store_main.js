@@ -35,7 +35,7 @@ const mutations = {
     }
     state.isLoggedIn = target
     if (target) {
-      router.push({name: 'home'})
+      router.push({name: 'dashboard'})
     }
   }
 }
