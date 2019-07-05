@@ -10,7 +10,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'dashboard',
       component: Dashboard
     },
     {
@@ -38,7 +37,6 @@ export default new Router({
     },
     {
       path: '/analytics/:id',
-      name: 'analytics',
       component: Analytics
     }
   ]

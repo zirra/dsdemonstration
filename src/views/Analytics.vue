@@ -1,8 +1,8 @@
 <template>
   <div class="content-container" style="background-color: #fff;">
-    <div class="brand-container">
+    <div class="brand-container" >
       <div v-for="item in sponsors" v-bind:key="item.id">
-        <div :class="getClass(item.name)" @click="setBrand(item.name)">
+        <div :class="getClass(item.name)" @click="setBrand(item.name)" v-bind:key="actingBrand">
           <img :src="item.img" style="height:94px; padding:3px;"/>
         </div>
       </div>
@@ -23,7 +23,8 @@ export default {
   data () {
     return {
       hasBrand: false,
-      currentBrand: null
+      currentBrand: null,
+      actingBrand: null
     }
   },
   mounted () {
@@ -46,7 +47,9 @@ export default {
     },
     setBrand (name) {
       let lname = name.toLowerCase()
-      this.$router.push(`/analytics/${lname}`)
+      this.hasBrand = true
+      this.currentBrand = lname
+      this.actingBrand = lname
     },
     ...mapActions([
       'setCurrentNav'
