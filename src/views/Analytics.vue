@@ -65,8 +65,8 @@ export default {
 
 <style>
 .brand-container{
-  border-top-left-radius:10px;
-  border-top-right-radius:10px;
+  /* border-top-left-radius:10px;
+  border-top-right-radius:10px; */
   width:100%;
   height:100px;
   background-color: #48A8FF;

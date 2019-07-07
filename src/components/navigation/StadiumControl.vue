@@ -18,12 +18,24 @@ export default {
   name: 'seat-control',
   data () {
     return {
-
+      targetId: null,
+      ads: [
+        '"test":"https://mp.vibescm.com/c/72pb07", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/accessories.jpg"',
+        '"test":"https://mp.vibescm.com/c/k2z56t", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/jerseys.jpg"',
+      ],
+      prizes: [
+        '"test":"https://mp.vibescm.com/c/872fcf", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/chiefs_lexus.jpg"',
+        '"test":"https://mp.vibescm.com/c/872fcf", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/chiefs_dog.jpg"',
+        '"test":"https://mp.vibescm.com/c/872fcf", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/chiefs_pass.jpg"'
+      ]
     }
   },
   methods: {
     hello (id) {
-      alert(`hello ${id}`)
+      this.targetId = id
+      this.$emit('select-seat', id)
+      console.log(id)
+      this.$socket.emit('sendToAll',`{"test":"https://mp.vibescm.com/c/72pb07", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/accessories.jpg", "client":"tester"}`)
     }
   }
 }
