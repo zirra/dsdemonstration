@@ -21,7 +21,7 @@ export default {
   width: 32%;
   float: left;
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   min-height: 180px; /* minimum height */
   position: relative;
 }

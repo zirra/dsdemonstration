@@ -82,7 +82,7 @@ export default {
   float: none;
   height: 500px;
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .dashboard-maingraph {
   width: 66%;
@@ -90,7 +90,7 @@ export default {
   float: left;
   height: 500px;
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .dashboard-sponsors {
   text-align: center;

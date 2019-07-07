@@ -1,6 +1,6 @@
 <template>
   <div class="content-container">
-    <stadium-controller />
+    <stadium-controller @select-seat="callOut" />
   </div>
 </template>
 
@@ -10,6 +10,22 @@ export default {
   name: 'controller-view',
   components: {
     'stadium-controller': StadiumControl
+  },
+  methods : {
+    callOut (id) {
+      console.log(id)
+    }
+  },
+  sockets: {
+    connect () {
+      this.isConnected = true
+      console.log('server connected')
+    },
+
+    disconnect () {
+      this.isConnected = false
+      console.log('server disconnected')
+    }
   }
 }
 </script>
