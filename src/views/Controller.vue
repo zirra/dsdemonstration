@@ -1,6 +1,21 @@
 <template>
   <div class="content-container">
-    <stadium-controller @select-seat="callOut" />
+    <div style="width:50; background-color: #fff;">
+      <stadium-controller @select-seat="callOut" />
+    </div>    
+    <div style="clear:both; float:none; padding:1%;"></div>
+    <div style="width:100%; background-color:#fff;">
+      <div style="margin:8px;">
+        <h3 class="cherry">Sample Controller</h3>
+        <p>Instruction for the controller module.</p>
+        <p>
+          <ol>
+            <li>Select a module on the left</li>
+            <li>Select a target option from the map or hit Send All</li>
+          </ol>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

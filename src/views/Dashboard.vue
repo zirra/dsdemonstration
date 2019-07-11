@@ -11,8 +11,12 @@
         <dashboard-main />
       </div>
       <div class="dashboard-sponsors">
-        <div class="brand-item" v-for="item in sponsors" v-bind:key="item._id" :style="getColor(item.color)" @click="analyze(item.name)">
-          <img :src="item.img" style="height:94px;"/>
+        <div v-for="item in sponsors" 
+        v-bind:key="item._id" 
+        @click="analyze(item.name)"
+        class="brand-item" style="background-color: #fff; border-left: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div :style="`width: 75px; height: 75px; background-color:#48a8ff; border-radius: 50%; border: 5px solid #eee; float:left; margin: 7px 20px 0 7px;`"><div style="color: #fff; font-size: 24px; text-align:center; line-height: 75px;">&nbsp;</div></div>
+        <div style="float: left;"> <img :src="item.img" style="height:94px;"/></div>
         </div>
       </div>
     </div>
