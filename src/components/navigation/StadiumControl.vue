@@ -117,12 +117,25 @@ export default {
       if(this.moduleId != null) {
         this.targetId = id
         this.$emit('select-seat', id)
-        console.log(id) 
-
+        let seats = [
+          'rWiBxuF_c',
+          'QASrjgT2u',
+          '4PYOk-hDw',
+          '0ukUhYDRZ',
+          'UsiuYppkl',
+          'uCdWD9FN4',
+          'cjnIKTJBk',
+          '4krFCZXKq',
+          'gLbM3-_rP',
+          'yUR5MnhLL',
+        ]
         let dest = null
 
         let splitval = this.moduleId.split('_')
         let client = splitval[0].toLowerCase()
+        
+        alert(seats[this.targetId-1])
+
 
         switch (client) {
           case 'bacardi':
@@ -147,7 +160,8 @@ export default {
           this.$socket.emit('sendToAll',`{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
         } else {
           this.$socket.emit('sendToAll', '');
-          this.$socket.emit('target', 'chiefs-seat' + this.targetId, `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
+          //this.$socket.emit('target', 'chiefs-seat' + this.targetId, `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
+          this.$socket.emit('target', 'Ymfj_OzSK-seat' + seats[thistargetId], `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
         }
       } else {
         alert('You must select a module to send')
