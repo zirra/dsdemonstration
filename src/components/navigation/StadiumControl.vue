@@ -134,7 +134,7 @@ export default {
         let splitval = this.moduleId.split('_')
         let client = splitval[0].toLowerCase()
         
-        alert(seats[this.targetId-1])
+        //alert(seats[this.targetId-1])
 
 
         switch (client) {
@@ -161,7 +161,7 @@ export default {
         } else {
           this.$socket.emit('sendToAll', '');
           //this.$socket.emit('target', 'chiefs-seat' + this.targetId, `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
-          this.$socket.emit('target', 'Ymfj_OzSK-seat' + seats[thistargetId], `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
+          this.$socket.emit('target', 'Ymfj_OzSK-' + seats[this.targetId], `{"test":"${dest}", "img":"https://s3.us-east-2.amazonaws.com/ds-stadium-bucket/chiefs/${this.moduleType}${this.moduleId}.jpg", "client":"${this.moduleId}"}`)
         }
       } else {
         alert('You must select a module to send')
